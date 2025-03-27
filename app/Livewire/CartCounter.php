@@ -12,7 +12,12 @@ class CartCounter extends Component
     public function render()
     {
         // $counter = Cart::getCartStatic();
-        $counter = count(Cart::getCartStatic());
+        $counter = 0;
+        // $counter = count(Cart::getCartStatic());
+        foreach(Cart::getCartStatic() as $item){
+            $counter += $item['quantity'];
+        }
+
         return view('livewire.cart-counter', compact('counter'));
     }
 
