@@ -1,4 +1,6 @@
 <div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-primary me-3">Vider Panier</button>
+
     <div class="position-relative">
         <button class="btn btn-primary">
             <i class="bi bi-cart"></i> Panier
@@ -7,4 +9,5 @@
             {{ $counter }}
         </span>
     </div>
+
 </div>
