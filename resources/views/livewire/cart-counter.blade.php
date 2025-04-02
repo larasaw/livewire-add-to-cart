@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-end mb-3">
-    <button class="btn btn-primary me-3">Vider Panier</button>
+    <button class="btn btn-primary me-3" wire:click="clearCounter">Vider Panier</button>
 
     <div class="position-relative">
         <button class="btn btn-primary">

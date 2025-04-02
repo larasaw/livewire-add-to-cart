@@ -21,5 +21,9 @@ class CartCounter extends Component
         return view('livewire.cart-counter', compact('counter'));
     }
 
+    public function clearCounter(){
+        dd('clear counter');
+    }
+
 
 }
