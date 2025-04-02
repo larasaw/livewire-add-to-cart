@@ -10,6 +10,7 @@ class CartList extends Component
 {
     public $cartid=0;
     public $quantity=1;
+    public $searchCard='';
 
     public function edit($id)
     {
@@ -28,7 +29,8 @@ class CartList extends Component
     #[On('additem')]
     public function render()
     {
-       $cart=Cart::getCartStatic();
+        $instCart = new Cart();
+       $cart=$instCart->searchCard($this->searchCard);
         return view('livewire.cart-list',compact('cart'));
     }
 

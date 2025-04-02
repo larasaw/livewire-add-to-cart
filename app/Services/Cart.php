@@ -111,4 +111,15 @@ public function update($id, $quantity){
         }
         return $total;
     }
+
+    public function searchCard($search){
+        $cart = Session::get($this->cartKey, []);
+        $result = [];
+        foreach ($cart as $item) {
+            if (stripos($item['name'], $search) !== false) {
+                $result[] = $item;
+            }
+        }
+        return $result;
+    }
 }

@@ -1,6 +1,6 @@
 <div>
     <div class="mb-3">
-        <input wire:model.live.debounce.300ms="search" type="text" class="form-control" placeholder="Search products...">
+        <input wire:model.live.debounce.500ms="search" type="text" class="form-control" placeholder="Search products...">
 
     </div>
     <table class="table table-bordered table-hover">

@@ -1,4 +1,8 @@
 <div style="padding: 20px; font-family: Arial, sans-serif;">
+    <div style="margin-bottom: 20px;">
+        <input type="text" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ddd; border-radius: 4px;"
+               placeholder="Search products..." wire:model.live="searchCard">
+    </div>
     <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 16px; text-align: left;">
         <thead>
             <tr style="background-color: #f4f4f4; border-bottom: 2px solid #ddd;">
