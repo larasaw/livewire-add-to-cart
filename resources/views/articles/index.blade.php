@@ -12,35 +12,8 @@
 <div class="container mt-5">
     <h1 class="mb-4">Articles</h1>
     <livewire:cart-counter />
-    <table class="table table-bordered table-hover">
-        <thead class="table-dark">
-            <tr>
-                <th>Designation</th>
-                <th>Stock</th>
-                <th>Prix HT</th>
-                <th>Tva</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($articles as $article)
-                <tr>
-                    <td>{{ $article->designation ?? '-' }}</td>
-                    <td>{{ $article->qte ?? '-' }}</td>
-                    <td>{{ $article->prix_ht ??  '-' }}</td>
-                    <td>{{ $article->tva ?? '-' }}</td>
-                    <td>
-                       <livewire:cart :article="$article" :key="$article->id" />
-                        {{-- <button class="btn btn-danger btn-sm" wire:click="deleteArticle({{ $article->id }})">Delete</button> --}}
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
-    <div class="d-flex justify-content-center mt-4">
-        {{ $articles->links() }}
-    </div>
 
+    <livewire:article-table />
     <div class="mt-5">
         <h2>Cart</h2>
         <livewire:cart-list />
