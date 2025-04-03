@@ -10,7 +10,7 @@ class EmailController extends Controller
 {
     public function sendEmail(){
 
-        Mail::to('yajivaf283@buides.com')->send(new ProfileMail());
+        Mail::to('ofpptlaravel@gmail.com')->send(new ProfileMail());
         return "Email has been sent..";
     }
 }
